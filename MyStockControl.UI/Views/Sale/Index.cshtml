@@ -1,0 +1,36 @@
+﻿@model MyStockControl.Entities.Domain.Sale
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+
+<a href="/Sale/CreateNewSale/" class=" btn btn-primary" style="float:right;margin-bottom:10px;">Yeni sale Ekle</a>
+
+
+@*<form method="post" asp-controller="Sale" asp-action="CreateNewSale" class="form-group">
+    <label>Ürün Adı</label>
+     @Html.DropDownListFor(p=>p.ProductId,(List<SelectListItem>)ViewBag.productdata,new {  @class="form-control"})
+
+    <label>Müşteri Adı</label>
+    @Html.DropDownListFor(c=>c.CustomerId,(List<SelectListItem>)ViewBag.customerdata,new {  @class="form-control"})
+
+    <label>Ürün Fiyatı</label>
+    <input class="form-control" type="text" name="Price" required />
+
+    <label>Stok Adeti</label>
+    <input class="form-control" type="text" name="Stock" required />
+
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Ekle</button>
+
+    </div>
+</form>
+*@
+
+
+

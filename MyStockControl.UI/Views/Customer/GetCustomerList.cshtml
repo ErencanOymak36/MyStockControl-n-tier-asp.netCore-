@@ -1,0 +1,81 @@
+﻿@using MyStockControl.Entities.Domain
+@model List<Customer>
+@{
+    ViewData["Title"] = "GetCustomerList";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h1>Müşteriler</h1>
+<div>
+    <a href="#" data-toggle="modal" data-target="#AddCustomerModal" class=" btn btn-primary" style="float:right;margin-bottom:10px;">Yeni Müşteri Ekle</a>
+    <table class="table table-hover" id="CustomerTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.CustomerId</td>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.LastName</td>
+                    <td>
+                        <a href="/Customer/UpdateCustomerPage/@customer.CustomerId" class="btn btn-success">Güncelle</a>
+                        <a href="/Customer/DeleteCustomer/@customer.CustomerId"  class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+<div class="modal" id="AddCustomerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Yeni Müşteri</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-controller="Customer" asp-action="AddNewCustomer" class="form-group">
+                    <label>İsim</label>
+                    <input class="form-control" type="text" name="FirstName" required />
+
+                    <label>Soyisim</label>
+                    <input class="form-control" type="text" name="LastName" required/>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+<script>
+    
+    $('#CustomerTable').DataTable(
+        {
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Turkish.json"
+            }
+        }
+    );
+</script>
+
+

@@ -1,0 +1,26 @@
+﻿@model MyStockControl.Entities.Domain.Category
+
+
+@{
+    ViewData["Title"] = "AddNewProduct";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+<form method="post" asp-controller="Product" asp-action="AddNewProduct" class="form-group">
+    <label>Ürün Adı</label>
+    <input class="form-control" type="text" name="Name" required />
+
+    <label>Kategori</label>
+    @Html.DropDownListFor(c=>c.CategoryId,(List<SelectListItem>)ViewBag.categorydata,new {  @class="form-control"})
+
+    <label>Ürün Fiyatı</label>
+    <input class="form-control" type="text" name="Price" required />
+
+    <label>Stok Adeti</label>
+    <input class="form-control" type="text" name="Stock" required />
+
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Ekle</button>
+       
+    </div>
+</form>

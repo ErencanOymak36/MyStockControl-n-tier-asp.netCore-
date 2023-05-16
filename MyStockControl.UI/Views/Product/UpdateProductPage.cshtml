@@ -1,0 +1,32 @@
+﻿@model MyStockControl.Entities.Domain.Product
+@{
+    ViewData["Title"] = "UpdateProductPage";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h1>UpdateProductPage</h1>
+@using (Html.BeginForm("UpdateProduct","Product",FormMethod.Post))
+{
+   <div class="form-group">
+       @Html.HiddenFor(p=>p.ProductId)
+       @Html.HiddenFor(p=>p.ProductId,new{@class="form-control"})
+
+       @Html.LabelFor(p=>p.Name)
+       @Html.TextBoxFor(p=>p.Name,new{@class="form-control"})
+
+        @Html.LabelFor(p=>p.CategoryId)
+        @Html.DropDownListFor(c=>c.CategoryId,(List<SelectListItem>)ViewBag.categorydata,new {  @class="form-control"})
+
+        @Html.LabelFor(p=>p.Stock)
+        @Html.TextBoxFor(p=>p.Stock,new{@class="form-control"})
+
+        @Html.LabelFor(p=>p.Price)
+        @Html.TextBoxFor(p=>p.Price,new{@class="form-control"})
+
+
+   </div>
+   <div>
+        <button class="btn btn-success" type="submit">Güncelle</button>
+   </div>
+}
+
