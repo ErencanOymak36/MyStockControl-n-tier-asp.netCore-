@@ -1,0 +1,12 @@
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\bin\Debug\net6.0\MyStockControl.Core.deps.json
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\bin\Debug\net6.0\MyStockControl.Core.dll
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\bin\Debug\net6.0\MyStockControl.Core.pdb
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.csproj.AssemblyReference.cache
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.AssemblyInfoInputs.cache
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.AssemblyInfo.cs
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.csproj.CoreCompileInputs.cache
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.dll
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\refint\MyStockControl.Core.dll
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\MyStockControl.Core.pdb
+C:\Users\erenc\Desktop\MyStockControl\MyStockControl.Core\obj\Debug\net6.0\ref\MyStockControl.Core.dll
