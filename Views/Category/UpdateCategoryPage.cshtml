@@ -1,0 +1,23 @@
+﻿@model MyStockControl.Entities.Domain.Category
+@{
+    ViewData["Title"] = "UpdateCategoryPage";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h1>UpdateCategoryPage</h1>
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(c=>c.CategoryId)
+        @Html.HiddenFor(c=>c.CategoryId,new{@class="form-control"})
+        
+
+        @Html.LabelFor(c=>c.Name)
+        @Html.TextBoxFor(c=>c.Name,new{@class="form-control"})
+
+    </div>
+    <div>
+        <button class="btn btn-success" type="submit">Güncelle</button>
+    </div>
+}
