@@ -1,2 +1,7 @@
 # MyStockControl-n-tier-asp.netCore-
-Katmanlı mimari kullanan bir stok takip sistemi
+
+Katmanlı mimari kullanrak yapmış olduğum bir projedir.
+
+Code-First
+CRUD işlemleri
+Generic Yapı
